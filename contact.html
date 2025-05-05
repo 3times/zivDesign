@@ -8,13 +8,13 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background-color: skyblue;
+            background-color: rgb(109, 24, 55);
         }
 
         .container {
-            max-width: 800px;
+            max-width: 550px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 2%;
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,16 +33,22 @@
 
         input,
         textarea {
-            margin-top: 15px;
-            padding: 15px;
+            height: 30px;
+            margin-top: 25px;
+            padding: 5px;
             border: 1px solid #cccccc;
             border-radius: 4px;
             font-size: 18px;
         }
 
+        #message {
+            height: 200px;
+
+        }
+
         label {
             margin-top: 15px;
-            font-size: 16px;
+            font-size: 22px;
             color: #555555;
         }
 
@@ -50,10 +56,10 @@
             margin-top: 20px;
             padding: 14px;
             background-color: #007BFF;
-            color: #ffffff;
+            color: #f8f40b;
             border: none;
             border-radius: 4px;
-            font-size: 18px;
+            font-size: 26px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -61,6 +67,29 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        ::placeholder {
+            font-size: 25px;
+            color: #8f1414;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(2);
+            margin-right: 30px;
+            /* Adds space between the checkbox and label */
+        }
+
+        input[type="checkbox"]:hover {
+
+            transform: scale(3);
+            /* Slightly increase size on hover */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+        }
+
+
+
+
 
         @keyframes fadeIn {
             from {
@@ -76,20 +105,18 @@
 
         @media (max-width: 600px) {
             .container {
-                margin: 20px;
+                margin: 50px;
                 padding: 20px;
             }
 
             input,
             textarea,
             button {
-                font-size: 16px;
-                padding: 14px;
+                font-size: 20px;
+                padding: 20px;
             }
 
-            label {
-                font-size: 15px;
-            }
+
         }
     </style>
 </head>
