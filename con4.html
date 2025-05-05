@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background-color: skyblue;
+            background-color: skyblue
         }
 
         .container {
@@ -31,29 +31,28 @@
             flex-direction: column;
         }
 
-        input,
-        textarea {
-            margin-top: 15px;
-            padding: 15px;
-            border: 1px solid #cccccc;
-            border-radius: 4px;
-            font-size: 18px;
-        }
-
         label {
             margin-top: 15px;
-            font-size: 16px;
+            margin-bottom: 5px;
             color: #555555;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 16px;
         }
 
         button {
             margin-top: 20px;
-            padding: 14px;
+            padding: 12px;
             background-color: #007BFF;
             color: #ffffff;
             border: none;
             border-radius: 4px;
-            font-size: 18px;
+            font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -77,18 +76,7 @@
         @media (max-width: 600px) {
             .container {
                 margin: 20px;
-                padding: 20px;
-            }
-
-            input,
-            textarea,
-            button {
-                font-size: 16px;
-                padding: 14px;
-            }
-
-            label {
-                font-size: 15px;
+                padding: 15px;
             }
         }
     </style>
@@ -100,32 +88,39 @@
         <h1>Contact Us</h1>
         <form action="https://formsubmit.co/a87b0b7e6138dfd3d49ee0cfc8cc5659" method="POST">
 
+
             <input type="text" id="name" placeholder="Name" name="name" required>
 
+            <label for="email"></label>
             <input type="email" id="email" placeholder="Email" name="email" required>
+            <label for="email"></label>
 
-            <input type="tel" id="phone" name="phone" placeholder="Phone number" pattern="^\+?[0-9\s\-]{7,15}$"
-                title="Enter a valid phone number">
 
+
+            <input type="tel" id="phone" name="phone" placeholder="Phone number" title="Enter a valid phone number">
             <label>
                 <input type="checkbox" id="call-me" name="call_me">
-                Check this if you would like to be phoned back
-            </label>
+                Check this if you would like to be phoned back</label>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
 
-            <textarea id="message" name="message" rows="6" placeholder="Message" required></textarea>
-
-            <input type="hidden" name="_next" value="https://zivdesign.fr/thankyou.html">
+            <!-- Redirect to thank you page after submission -->
+            <input type="hidden" name="_next" value="https://zivdesign.fr/thankyou.html
+            ">
 
             <button type="submit">Send Message</button>
         </form>
     </div>
-
     <script>
         const checkbox = document.getElementById('call-me');
         const phoneInput = document.getElementById('phone');
 
         checkbox.addEventListener('change', function () {
-            phoneInput.required = this.checked;
+            if (this.checked) {
+                phoneInput.required = true;
+            } else {
+                phoneInput.required = false;
+            }
         });
     </script>
 
