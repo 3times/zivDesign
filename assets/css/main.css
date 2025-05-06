@@ -179,7 +179,10 @@ body {
 }
 
 h1,
-h2,
+h2 {
+  color: #970071;
+  font-weight: normal;
+}
 h3,
 h4 {
   color: #007897;
@@ -199,7 +202,7 @@ h2 {
 
 h3,
 h4 {
-  color: #283121;
+  color: #3a7c07;
   margin-bottom: 0.5em;
 }
 
